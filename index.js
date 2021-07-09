@@ -1,3 +1,11 @@
+function myFunction() {
+    myVar = setTimeout(showPage, 5000);
+  }
+  
+function showPage() {
+document.getElementById("loader").style.display = "none";
+}
+
 var menuBar = document.getElementById("menu-bar");
         menuBar.addEventListener("click",() => {
             var menu = document.getElementById("menu");

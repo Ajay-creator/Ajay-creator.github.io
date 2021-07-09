@@ -40,10 +40,7 @@ html{
     background-clip: text;
     -webkit-text-fill-color:transparent;
 }
-.menu-bar:active{
-    transform: rotateZ(90deg);
-    transition:all 0.1s ease-in-out ;
-}
+
 .menu{
     position: fixed;
     right: 30px;
@@ -177,10 +174,6 @@ html{
     z-index:1000;
     cursor: pointer;
 }
-.social-media-bar:active{
-    transform: rotateZ(90deg);
-    transition:0.1s ease-in-out;
-}
 .social-media{
     visibility: hidden;
     position: fixed;
@@ -245,7 +238,7 @@ html{
     /* content:"AJay Veeraveni"; */
     margin-top:200px;
     color:#fff;
-    font-size:50px ;
+    font-size:40px ;
     font-weight: bolder;
     letter-spacing: 1.25px;
     font-family: 'Nosifer', cursive;
@@ -533,13 +526,9 @@ html{
     left: 0;
     height: 100%;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
     background: #000;
     opacity: 0.6;
-    
-}
-.project2 img{
-    opacity:0.8;
 }
 .project .name{
     position: absolute;
@@ -567,11 +556,10 @@ html{
     left: 50%;
     transform:translate(-50%,-50%);
     /* margin: auto 20px auto -10px; */
-    width: 70%;
+    width: 85%;
 }
 .project .details ul li{
     list-style: square;
-    letter-spacing: 1.1px;
     background: rgb(34,193,195);
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
     -webkit-background-clip: text;
@@ -584,7 +572,7 @@ html{
 }
 .project .active{
     visibility: visible;
-    animation: slide-up 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation: slide-up 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
     transform-origin: center;
 }
 
@@ -602,7 +590,7 @@ html{
 }
 .project .details .name{
     position: absolute;
-    top:40px;
+    top:30px;
     left: calc(50%);
     font-size: 20px;
     /* text-align: center; */
@@ -610,7 +598,7 @@ html{
 .project .details a{
     position:absolute;
     color: #000;
-    bottom: 20px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     text-decoration: none;
@@ -719,6 +707,13 @@ html{
     }
     .project{
         width:450px;
+    }
+    .project .details ul{
+        width: 60%;
+        letter-spacing: 1.1px;
+    }
+    .projects .details .name{
+        top:50px;
     }
     .contact form input{
         width: 40%;
