@@ -1,14 +1,19 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Keania+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
 *{
     padding: 0;
     margin:0 auto;
     box-sizing: border-box;
-    font-family: 'Lobster', cursive;
+    font-family: 'Keania One', cursive;
 }
 html{
     scroll-behavior: smooth;
+}
+.body{
+    display: none;
+    background: #000000;
 }
 .header img{
     /* position:fixed; */
@@ -59,7 +64,7 @@ html{
     margin-top: 15px;
     background: #000;
     border-radius: 50px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2), -2px -2px 15px rgba(0,0,0,0.1);
+    box-shadow: 2px 4px 10px rgba(124, 68, 68, 0.3),-2px -4px 15px rgba(0,0,0,0.4);
     z-index:1000;
     text-align: center;
     cursor: pointer;
@@ -213,11 +218,22 @@ html{
     height:650px;
     text-align: center;
     padding:30px 10px;
-    background-image: url("https://dl.dropboxusercontent.com/s/5wi102k039uluif/benz.webp?");
+    /* background-image: url("https://dl.dropboxusercontent.com/s/5wi102k039uluif/benz.webp?"); */
+    background-image: url("images/keykeyboard.jpg");
     background-position: center;
     background-size: cover;
     position: relative;
 }
+.hero img{
+    position: relative;
+    height: 300px;
+    width:100%;
+    margin-top: 60px;
+    z-index: 1;
+    filter: brightness(0.8);
+    color:#ffffff;
+}
+
 .hero .contrast{
     position: absolute;
     top: 0;
@@ -225,7 +241,6 @@ html{
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.5);
-    background: radial-gradient(circle,rgba(255,255,255,0.2) 10%,rgba(0,0,0,0.7) 80%);
 }
 /* .hero img{
     position: absolute;
@@ -234,14 +249,14 @@ html{
     top: 0;
     left: 0;
 } */
+
 .hero h1{
-    /* content:"AJay Veeraveni"; */
-    margin-top:200px;
     color:#fff;
-    font-size:40px ;
+    transform: translateY(-50px);
+    font-size:50px ;
     font-weight: bolder;
-    letter-spacing: 1.25px;
-    font-family: 'Nosifer', cursive;
+    letter-spacing: 1.15px;
+    font-family: 'Saira Stencil One', cursive;
     background: rgb(131,58,180);
     background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     background-clip: text;
@@ -254,15 +269,15 @@ html{
 .hero p{
     font-size: 35px;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 22%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(200deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 22%, rgba(0,212,255,1) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color:transparent;
     font-weight: bold;
-    letter-spacing: 1.5px;
-    text-align: center;
+    letter-spacing: 1.2px;
     animation: hero-up 3s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1 forwards;
 }
+
 @keyframes hero-up {
     to{
         transform: translateY(0);
@@ -287,6 +302,7 @@ html{
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top:20px;
+    margin-bottom: 20px;
 }
 
 /* Education */
@@ -295,11 +311,11 @@ html{
     justify-content:space-between;
     flex-wrap: wrap;
 }
-.education li{
+.education ul li{
     list-style: none;
     margin: 10px auto;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,29,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,29,121,1) 35%, rgba(0,212,255,0.6) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -310,7 +326,7 @@ html{
 .box{
     position: relative;
     margin:20px auto;
-    background:#ffaa00a2;
+    background:#ffcd17ef;
     border-radius:10px;
     width:70%;
     height: 200px;
@@ -331,13 +347,13 @@ html{
     content:'';
     position: absolute;
     width:25px;
-    height: 370px;
+    height: 300px;
     left:-45px;
-    top:-140px;
-    border-radius: 10px;
-    background-image: linear-gradient( 135deg, #FCCF31 10%, #F55555 100%);
-    z-index:-1;
+    top:-80px;
+    border-radius: 5px;
+    background-image: linear-gradient( 90deg, #FCCF31 10%, #F55555 100%);
     box-shadow: 2px 4px 15px rgba(0,0,0,0.2), -2px -4px 20px rgba(0,0,0,0.1);
+    z-index: 0;
 }
 .box::after{
     content: '❤';
@@ -349,11 +365,12 @@ html{
     background-image: linear-gradient( to right, #FCCF31 10%, #F55555 100%);
     color: #CD113B;
     left: -52px;
-    top:70px;
+    top:75px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 2px 4px 10px rgba(0,0,0,0.3), -2px -4px 15px rgba(0,0,0,0.4);
+    z-index: 5;
 }
 .box:nth-child(2)::after{
     content:'✌';
@@ -405,7 +422,7 @@ html{
     height: 80px;
     width: 80px;
     margin: -40px 0 0 -40px;
-    background: #fff;
+    background: #000000;
     border-radius: 100%;
 }
 .circular .number{
@@ -423,7 +440,7 @@ html{
     width: 100%;
     border-radius:50%;
     clip: rect(0px,100px,100px,50px);
-    background:#fff;
+    background:#000000;
 }
 .circle .bar .progress{
     position: absolute;
@@ -537,7 +554,7 @@ html{
     transform: translate(-50%,-50%);
     font-size: 30px;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
     font-weight: bolder;
     letter-spacing: 1.25px;
 }
@@ -545,10 +562,10 @@ html{
     position: absolute;
     height:100%;
     width:100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
     color: #fff;
     visibility: hidden;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .project .details ul{
     position: absolute;
@@ -559,7 +576,7 @@ html{
     width: 85%;
 }
 .project .details ul li{
-    list-style: square;
+    font-size: 13px;
     background: rgb(34,193,195);
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
     -webkit-background-clip: text;
@@ -614,6 +631,7 @@ html{
 /* start of Contact form */
 #contact{
     margin-top: 50px;
+    color: #ffffff;
 }
 .contact{
     width: 90%;
@@ -633,7 +651,7 @@ html{
     border: solid 5px #c2c2c2;
     margin: 15px auto;
     background: transparent;
-    color: #000;
+    color: #ffffff;
     border-radius:10px;
     outline: none;
     border-image-slice: 1;
@@ -647,15 +665,23 @@ html{
     border-image-slice:1;
     border-image-source:linear-gradient(to right, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     background: transparent;
-    color: #000;
+    color: #ffffff;
     font-size:1em; 
-    border-radius: 30px;
     outline: none;
 }
-.contact input[type="submit"]{
+.contact button{
     cursor: pointer;
-    border-radius: 10px;
-    color: #000;
+    color: #ffffff;
+    margin: 10px 25%;
+    padding: 20px;
+    width: 50%;
+    border:solid 5px transparent;
+    border-image-slice:1;
+    border-image-source:linear-gradient(to right, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: transparent;
+    font-size:1em; 
+    outline: none;
+
 }
     
 /* end of contact form */
@@ -663,41 +689,55 @@ html{
 /* footer */
 
 .footer{
-    height: 60px;
     width: 100%;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     background: #000;
 }
 .footer span{
-    font-size: 25px;
+    font-size: 35px;
     background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 22%, rgba(0,212,255,1) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color:transparent;
+    font-family: 'Libre Barcode 39 Extended Text', cursive;
 }
 
 /* media queries */
+@media  screen and (min-width:400px) {
+    .project .details ul li{
+        font-size: 18px;
+    }
+}
 @media screen and (min-width:768px) {
     .hero{
         height:700px;
-        background: url("https://dl.dropboxusercontent.com/s/u4j0lwzy7hj800q/large_bg.webp?");
+        /* background: url("https://dl.dropboxusercontent.com/s/u4j0lwzy7hj800q/large_bg.webp?"); */
         background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row-reverse;  
     }
-    .hero .contrast{
-        background:rgba(0,0,0,0.5);
-        background-image: none;
+    .hero img{
+        height: 450px;
+        width: 100%;
+        filter: brightness(0.8);
+    }
+    .hero .text{
+        text-align: left; 
+        margin-left: 20px;
     }
     .hero h1{
         font-size:120px;
-        margin-top: 150px;
         line-height:150px ;
         background: rgb(131,58,180);
         background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
     }
     .box{
         width: 350px;
@@ -711,6 +751,7 @@ html{
     .project .details ul{
         width: 60%;
         letter-spacing: 1.1px;
+        font-size: 25px;
     }
     .projects .details .name{
         top:50px;

@@ -1,10 +1,11 @@
 function myFunction() {
-    myVar = setTimeout(showPage, 5000);
+    myVar = setTimeout(showPage, 4000);
   }
   
 function showPage() {
 document.getElementById("loader").style.display = "none";
-}
+document.getElementById("body").style.display = "block";
+
 
 var menuBar = document.getElementById("menu-bar");
         menuBar.addEventListener("click",() => {
@@ -163,3 +164,20 @@ project[3].addEventListener("mouseout",() => {
     var name = document.getElementsByClassName("name")[6];
     name.textContent = "E commerce"
 });
+
+}
+
+// Contact Form
+function SubForm (){
+    $.ajax({
+        url:"https://api.apispreadsheets.com/data/15356/",
+        type:"post",
+        data:$("#contact-form").serializeArray(),
+        success: function(){
+            alert("Form Data Submitted. I will reach you out in a while. Thanks :)")
+        },
+        error: function(){
+            alert("There was an error :(")
+        }
+    });
+}
