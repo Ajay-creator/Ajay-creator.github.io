@@ -446,7 +446,7 @@ html{
     box-shadow: 5px 5px 20px  rgba(0,0,0,0.4), -5px -8px 20px rgba(0,0,0,0.3);
     transition-duration: 1s;
     overflow: auto;
-    
+    scrollbar-width: 0.1px;
 }
 .project:hover{
     box-shadow: none;
@@ -476,21 +476,22 @@ html{
     position: absolute;
     top:0;
     bottom:0;
-    padding:20px 10px;
-    height:100%;
-    width:100%;
+    padding:10px 20px;
     background: rgba(0,0,0,0.7);
     color: #fff;
     visibility: hidden;
     border-radius: 5px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+    overflow-y: auto;
+    display: flex;
     flex-direction: column;
-    overflow: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.projects .details::-webkit-scrollbar{
+    width: 1px;
 }
 .project .details .name{
-    margin-top:20px;
+    margin-top:50px;
     margin-bottom: 10px;
     font-size:23px;
     font-weight: bold;
@@ -502,7 +503,7 @@ html{
     padding:1px 5px;
 }
 .project .details ul li::before{
-    content:'🌈';
+    content:'🎉';
 }
 .project:hover .details{
     visibility: visible;
@@ -511,6 +512,9 @@ html{
 }
 .project:hover .head-name {
     visibility: hidden;
+}
+.project6,.project5,.project6 .details, .project5 .details{
+    background: rgba(0,0,0,0.9);
 }
 
 @keyframes slide-right {
@@ -642,7 +646,8 @@ html{
         left:50px;
     }
     .project,.project .details{
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 }
 @media screen and (min-width:768px) {
@@ -672,7 +677,6 @@ html{
     }
     .project .details{
         padding:30px 20px;
-        overflow: hidden;
     }
     
 }
