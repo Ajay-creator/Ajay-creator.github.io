@@ -164,10 +164,10 @@ html{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    align-items: start;
+    align-items: center;
 }
 .hero .text .hero-name h1{
-    font-size:50px;
+    font-size:38px;
     font-weight: bold;
     margin:0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -654,6 +654,9 @@ html{
     .hero{
         padding-left: 40px;
         flex-flow: row;
+    }
+    .hero .text{
+        align-items: flex-start;
     }
     .hero .text .hero-name h1{
         font-size: 80px;
